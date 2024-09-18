@@ -32,13 +32,15 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
-    const userData = {
-      email,
-      password,
-    };
-    dispatch(login(userData));
+    // const userData = {
+    //   email,
+    //   password,
+    // };
+    // dispatch(login(userData));
+    e.preventDefault();
+      navigate('/dashboard');
   };
 
   return (

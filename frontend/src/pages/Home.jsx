@@ -17,6 +17,15 @@ const Home = () => {
           <li>
             <Link to="/register">Register</Link>
           </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/cart">Cart</Link>
+          </li>
+          <li>
+            <Link to="/orders">Orders</Link>
+          </li>
         </ul>
       </header>
       <div className="texts">

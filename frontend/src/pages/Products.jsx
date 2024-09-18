@@ -18,20 +18,43 @@ const Products = () => {
     margin: "0 auto",
   };
 
+  const styles = {
+    productContent: {
+      display: "flex",
+      flexWrap: "wrap",
+    },
+    infoDetails: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    info: {
+      marginTop: "50px",
+      padding: "25px 50px",
+      border: "1px solid rgb(214, 214, 214)",
+      borderRadius: "15px",
+      backgroundColor: "rgb(242, 242, 242)",
+      fontSize: "28px",
+      fontWeight: "500",
+      color: "#df3c5b",
+      fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
+    },
+  };
+
   if (loading) {
     return <ClipLoader size={60} color="#ecc20e" cssOverride={override} />;
   }
 
   if (products.length === 0) {
     return (
-      <div className="info-details">
-        <div className="info">No products found...</div>
+      <div style={styles.infoDetails}>
+        <div style={styles.info}>No products found...</div>
       </div>
     );
   }
 
   return (
-    <div className="product-content">
+    <div style={styles.productContent}>
       {products.map((product) => (
         <ProductItem key={product._id} product={product} />
       ))}

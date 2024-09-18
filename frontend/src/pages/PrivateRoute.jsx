@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
 
   if (user) return children;
 
-  return <Navigate to="/" />;
+  return <Navigate to="/cart" />;
 };
 
 export default PrivateRoute;
