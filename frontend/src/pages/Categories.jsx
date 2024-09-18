@@ -18,13 +18,27 @@ const Categories = () => {
     margin: "0 auto",
   };
 
+  const styles = {
+    categoryMenu: {
+      padding: "10px",
+      marginTop: "20px",
+    },
+    ul: {
+      display: "flex",
+      width: "100%",
+      overflowY: "hidden",
+      padding: "5px 10px 10px 5px",
+      whiteSpace: "nowrap",
+    },
+  };
+
   if (loading) {
     return <ScaleLoader color="#ecc20e" cssOverride={override} />;
   }
 
   return (
-    <div className="category-menu">
-      <ul>
+    <div style={styles.categoryMenu}>
+      <ul style={styles.ul}>
         {categories.map((category) => (
           <CategoryItem key={category._id} category={category} />
         ))}
